@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include "data.h"
 
 int main(int argc, char **argv) {
     // Process command line arguments.
@@ -19,6 +20,12 @@ int main(int argc, char **argv) {
     }
 
     // Skip the first line of the .csv file.
-    
+    char line[MAX_LINE_LEN];
+    fgets(line, sizeof(line), inFile);
+
+
+    while (fgets(line, sizeof(line), inFile)) {
+        suburb_t *suburb_ptr = readSuburb(line);
+    }
 
 }

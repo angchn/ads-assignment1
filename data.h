@@ -19,7 +19,7 @@ typedef struct suburb {
 } suburb_t;
 
 // Function definitions.
-
+suburb_t *readSuburb(char *line);
 
 
 #endif
