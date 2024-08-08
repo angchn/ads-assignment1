@@ -3,7 +3,7 @@ CFLAGS = -Wall -g
 
 LDLIBS = 
 
-SRC = dict1.c data.c
+SRC = dict1.c data.c dictionary.c
 
 OBJ = $(SRC:.c=.o)
  
