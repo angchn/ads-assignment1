@@ -20,9 +20,7 @@ int main(int argc, char **argv) {
     }
 
     // Initialise the head of an empty linked list.
-    node_t *head; 
-    head = malloc(sizeof(*head));
-    assert(head);
+    node_t *head = NULL;
 
     // Skip the first line of the .csv file.
     char line[MAX_LINE_LEN];
@@ -34,8 +32,11 @@ int main(int argc, char **argv) {
         // Add the suburb_t pointer to the linked list.
         appendNode(&head, suburbPtr);
     }
-
+    assert(head!= NULL);
+    printList(head);
 
     // REMEMBER TO FREE EVERYTHING IN THE END + CLOSE THE FILES.
+
+    freeList(head);
 
 }

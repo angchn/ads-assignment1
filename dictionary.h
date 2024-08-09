@@ -11,5 +11,7 @@ typedef struct node {
 
 // Function definitions.
 void appendNode(node_t **head, suburb_t *suburbPtr);
+void printList(node_t *node);
+void freeList(node_t *head);
 
 #endif
